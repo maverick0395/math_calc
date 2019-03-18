@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Computing matrixes online</title>
+    <link rel="stylesheet" href="css/rest.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <a class="logo-link" href="index.html">math calc</a>
+      <ul class="operations-list">
+        <li>
+          <a class="active" href="#">Справочник</a>
+        </li>
+        <li>
+          <a href="multiply.html">Умножение матриц</a>
+        </li>
+        <li>
+          <a href="concatenate.html">Сложение матриц</a>
+        </li>
+        <li>
+          <a href="determinate.html">Нахождение детерминанта</a>
+        </li>
+        <li>
+        <a href="expressions.html">Арифметические выражения</a></li>
+      </ul>
+    </header>
+    <main>
+      <article class="main-article">
+        <div class="content">
+						<div class="item wide roundRectangle shadow">
+
+              <h1>Операции над матрицами и их свойства</h1>
+
+              <p>Над матрицами можно выполнять определенные действия, которые, по аналогии с числами, называются сложение, вычитание и умножение. Так же существует действие, которое определяется только для матриц – это транспонирование матриц и нахождение  обратной матрицы к данной.</p>
+
+              <h2>Сложение и вычитание матриц</h2>
+              <div class="remark full green">
+	               <span class="title">ОПРЕДЕЛЕНИЕ</span>
+	               <div class="value">
+                    Суммой двух матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-52ad240f7430fb5b337b301087d1879b_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A=\left( a_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="75" style="vertical-align: -6px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-dd76ba6017ae8d0a9549e9e4a7f24906_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B=\left( b_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="74" style="vertical-align: -6px;"> одинакового порядка называют матрицу <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-3ea79d03bda860b5e98cbf0efb4cc7df_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="C=\left( c_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="74" style="vertical-align: -6px;"> такого же порядка, элементы которой равны сумме соответствующих элементов матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-7254caeb7c5b5ecf81f0c3fc744613ea_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B ," title="Rendered by QuickLaTeX.com" height="16" width="19" style="vertical-align: -4px;"> то есть <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-22d2e71ad74cf40c4bcbfbc1d16e2e47_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="c_{ij}}=a_{ij}}+b_{ij}}" title="Rendered by QuickLaTeX.com" height="19" width="110" style="vertical-align: -6px;"> .
+                    <p>Аналогично, разностью двух матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-52ad240f7430fb5b337b301087d1879b_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A=\left( a_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="75" style="vertical-align: -6px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-dd76ba6017ae8d0a9549e9e4a7f24906_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B=\left( b_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="74" style="vertical-align: -6px;"> одинакового порядка называют матрицу <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-3ea79d03bda860b5e98cbf0efb4cc7df_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="C=\left( c_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="74" style="vertical-align: -6px;"> такого же порядка, элементы которой равны разности соответствующих элементов матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-7254caeb7c5b5ecf81f0c3fc744613ea_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B ," title="Rendered by QuickLaTeX.com" height="16" width="19" style="vertical-align: -4px;"> то есть <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c894bfecb0045993ddaeb8452b92a996_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="c_{ij}}=a_{ij}}-b_{ij}}" title="Rendered by QuickLaTeX.com" height="19" width="110" style="vertical-align: -6px;"> .</p>
+	                </div>
+               </div>
+               <h3>Свойства операций сложения и вычитания матриц</h3>
+               <p class="ql-center-displayed-equation" style="line-height: 49px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-7ff37ede2ddef7544d397d40cef97b50_l3.svg" height="49" width="235" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A+\left( B+C \right)=\left( A+B \right)+C$ \[A+B=B+A\]" title="Rendered by QuickLaTeX.com"></p>
+               <p class="ql-center-displayed-equation" style="line-height: 13px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-99b38239efa06050ae6f1828ad3e9938_l3.svg" height="13" width="85" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A+\theta =A\]" title="Rendered by QuickLaTeX.com"></p>
+               <p class="ql-center-displayed-equation" style="line-height: 12px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-dcd6a16cb08e087a661900cac51f5dec_l3.svg" height="12" width="85" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A-\theta =A\]" title="Rendered by QuickLaTeX.com"></p>
+               <p class="ql-center-displayed-equation" style="line-height: 12px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-9cd077b6c60d4d25264e95857649e260_l3.svg" height="12" width="85" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A-A=\theta \]" title="Rendered by QuickLaTeX.com"></p>
+               <div class="remark full blue">
+	                <span class="title">ПРИМЕР 1</span>
+	                 <div class="value">
+		                   <table>
+			                      <tbody>
+                              <tr>
+				                          <td class="text">Задание</td>
+				                          <td>Найти сумму и разность матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-e6b67ca9131f126e20a95219c93a9034_l3.svg" class="ql-img-inline-formula quicklatex-auto-format"       alt="B" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;"> , если
+                                    <p class="ql-center-displayed-equation" style="line-height: 68px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-1b133ab1e5ea4410c654f9bd46ef4e76_l3.svg" height="68" width="259" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A=\left( \begin{matrix}    \begin{matrix}    12  \\    -3  \\    0  \\ \end{matrix} &amp; \begin{matrix}    2  \\    4  \\    7  \\ \end{matrix}  \\ \end{matrix} \right) ,\text{ }B=\left( \begin{matrix}    \begin{matrix}    -4  \\    -3  \\    10  \\ \end{matrix} &amp; \begin{matrix}    8  \\    6  \\    1  \\ \end{matrix}  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p></td>
+			                          </tr>
+			                          <tr>
+				                           <td class="text">Решение</td>
+				                           <td>Найдем сумму заданных матриц, для этого сложим соответствующие элементы этих матриц:
+                                     <p class="ql-center-displayed-equation" style="line-height: 68px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-2f039f6db5d1dd43939c6502db9a02d7_l3.svg" height="68" width="367" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A+B=\left( \begin{matrix}    \begin{matrix}    12+\left( -4 \right)  \\    -3+\left( -3 \right)  \\    0+10  \\ \end{matrix} &amp; \begin{matrix}    2+8  \\    4+6  \\    7+1  \\ \end{matrix}  \\ \end{matrix} \right)=\left( \begin{matrix}    \begin{matrix}    8  \\    -6  \\    10  \\ \end{matrix} &amp; \begin{matrix}    10  \\    10  \\    8  \\ \end{matrix}  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p>
+                                     <p>Найдем разность <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-45df3db6f3b2659f267ae12620d23523_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A-B ," title="Rendered by QuickLaTeX.com" height="16" width="56" style="vertical-align: -4px;"> для этого из элементов матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> вычтем соответствующие элементы матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-e6b67ca9131f126e20a95219c93a9034_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;">:</p>
+                                     <p class="ql-center-displayed-equation" style="line-height: 68px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-181d0ed15e01e66dd4591ad263ce7850_l3.svg" height="68" width="382" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A-B=\left( \begin{matrix}    \begin{matrix}    12-\left( -4 \right)  \\    -3-\left( -3 \right)  \\    0-10  \\ \end{matrix} &amp; \begin{matrix}    2-8  \\    4-6  \\    7-1  \\ \end{matrix}  \\ \end{matrix} \right)=\left( \begin{matrix}    \begin{matrix}    16  \\    0  \\    -10  \\ \end{matrix} &amp; \begin{matrix}    -6  \\    -2  \\    6  \\ \end{matrix}  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p>
+				                           </td>
+			                           </tr>
+                                 <tr>
+				                           <td class="text" style="padding-top: 22px;">Ответ</td>
+				                           <td><img src="/my_images/pic513.png" alt=""></td>
+			                           </tr>
+		                           </tbody>
+                             </table>
+	                          </div>
+                          </div>
+
+                          <h2>Умножение матрицы на число</h2>
+	                        <p>Произведением матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-52ad240f7430fb5b337b301087d1879b_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A=\left( a_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="75" style="vertical-align: -6px;"> на число <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-e7a0d149fdfa3f9e35d5ce1eee18afdb_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="k" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: 0px;"> есть матрица <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-3ea79d03bda860b5e98cbf0efb4cc7df_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="C=\left( c_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="74" style="vertical-align: -6px;"> того же порядка, что и матрица <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-7e654822c2e42b661c6be7a082c9113e_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A ," title="Rendered by QuickLaTeX.com" height="16" width="18" style="vertical-align: -4px;"> элементы которой получены умножением соответствующих элементов матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> на число <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-83d634c28a2fafff551efd7a44d5aa56_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="k ," title="Rendered by QuickLaTeX.com" height="17" width="13" style="vertical-align: -4px;"> то есть <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-65dcd3b116fc6796caa64392a205eb6d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="c_{ij}}=k\cdot a_{ij}}" title="Rendered by QuickLaTeX.com" height="19" width="91" style="vertical-align: -6px;">.</p>
+                          <h3>Свойства операции умножения матрицы на число</h3>
+                          <p class="ql-center-displayed-equation" style="line-height: 13px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-9750f31ccdf27ccd7b506b7c9b2d7d45_l3.svg" height="13" width="75" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[1\cdot A=A\]" title="Rendered by QuickLaTeX.com"></p>
+                          <p class="ql-center-displayed-equation" style="line-height: 12px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-99745b38b0fd21ddb6ef882ca71b1c22_l3.svg" height="12" width="71" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[0\cdot A=\theta \]" title="Rendered by QuickLaTeX.com"></p>
+                          <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-933d261d23f40182f762dfd9bd4bebc4_l3.svg" height="18" width="191" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[m\cdot \left( k\cdot A \right)=\left( m\cdot k \right)\cdot A \]" title="Rendered by QuickLaTeX.com"></p>
+                          <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-90c149d989a08d9ae8381c58e63e5dad_l3.svg" height="18" width="222" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[\left( m+k \right)\cdot A=m\cdot A+k\cdot A\]" title="Rendered by QuickLaTeX.com"></p>
+                          <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-6d045cf65de58b07a9c9feb9ff462668_l3.svg" height="18" width="214" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[k\cdot \left( A+B \right)=k\cdot A+k\cdot B\]" title="Rendered by QuickLaTeX.com"></p>
+                          <div class="remark full blue">
+	                          <span class="title">ПРИМЕР 2</span>
+	                            <div class="value">
+		                            <table>
+			                            <tbody>
+                                    <tr>
+				                              <td class="text">Задание</td>
+				                              <td>Найти произведение <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-0b77f776a1661fc677a729d0067ed3d1_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="2\cdot A" title="Rendered by QuickLaTeX.com" height="12" width="37" style="vertical-align: 0px;">
+                                      <p class="ql-center-displayed-equation" style="line-height: 45px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-43037e141c02dccd51d85f0861f340e6_l3.svg" height="45" width="113" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A=\left( \begin{matrix}    -2 &amp; 1  \\    0 &amp; 4  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p>
+                                      </td>
+			                              </tr>
+			                              <tr>
+				                              <td class="text">Решение</td>
+				                              <td>Умножим каждый элемент заданной <a href="http://ru.solverbook.com/spravochnik/matricy/" title="Матрицы">матрицы</a> на 2:
+                                      <p class="ql-center-displayed-equation" style="line-height: 45px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-ae7372d5c0932fb1f07c39fc3cba9497_l3.svg" height="45" width="301" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[2\cdot A=\left( \begin{matrix}    2\cdot \left( -2 \right) &amp; 2\cdot 1  \\    2\cdot 0 &amp; 2\cdot 4  \\ \end{matrix} \right)=\left( \begin{matrix}    -4 &amp; 2  \\    0 &amp; 8  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p>
+				                              </td>
+			                              </tr>
+			                              <tr>
+				                              <td class="text" style="padding-top: 12px;">Ответ</td>
+				                              <td><img src="/my_images/pic514.png" alt=""></td>
+			                              </tr>
+		                              </tbody>
+                                </table>
+	                             </div>
+                             </div>
+
+                             <h2>Умножение матриц</h2>
+                             <p>Если количество столбцов матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-26ac382235d39f71e5226282442bb130_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\left( k\times n \right)" title="Rendered by QuickLaTeX.com" height="18" width="57" style="vertical-align: -4px;"> равно числу строк матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-e6b67ca9131f126e20a95219c93a9034_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;"> <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-fcf208f2487955540d5d4c1fb1ac797c_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\left( n\times p \right) ," title="Rendered by QuickLaTeX.com" height="18" width="64" style="vertical-align: -4px;"> то для них определена матрица <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-606b82b0f5c713a03806b7d79791c340_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="C" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;"> размерности <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-1bd3b5133c02b6804038140ac4ead929_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\left( k\times p \right) ," title="Rendered by QuickLaTeX.com" height="18" width="64" style="vertical-align: -4px;"> которую называют её произведением. Элементы матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-606b82b0f5c713a03806b7d79791c340_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="C" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;"> находятся по правилу: элемент <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-81cec06d3e75f23cb45afeab63fc0333_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="c_{ij}}" title="Rendered by QuickLaTeX.com" height="14" width="19" style="vertical-align: -6px;"> равен сумме попарных произведений элементов <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-2929569f4ef1720f8f2dd45dc2122802_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="i" title="Rendered by QuickLaTeX.com" height="12" width="6" style="vertical-align: 0px;">-той строки матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-19ad2615f42b573c3dae1a3b37b4a7f5_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="j" title="Rendered by QuickLaTeX.com" height="16" width="9" style="vertical-align: -4px;">-того столбца матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-e6b67ca9131f126e20a95219c93a9034_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;">:</p>
+                             <p class="ql-center-displayed-equation" style="line-height: 53px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-8492faf00e62d2381d1d50a175b26e8e_l3.svg" height="53" width="380" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[c_{ij}}=a_{i1}}b_{1j}}+a_{i2}}b_{2j}}+\ldots +a_{in}}b_{nj}}=\sum\limits_{s=1}^{n}{a_{sn}}b_{sj}}}\]" title="Rendered by QuickLaTeX.com"></p>
+
+                             <h3>Свойства операции умножения матриц</h3>
+                             <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-01281fb1a137dbf66d5f7f9b14108c1f_l3.svg" height="18" width="197" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A\cdot \left( B\cdot C \right)=\left( A\cdot B \right)\cdot C\]" title="Rendered by QuickLaTeX.com"></p>
+                             <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-49b52eb5a11703aff549f12a285d8959_l3.svg" height="18" width="186" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[k\cdot \left( A\cdot B \right)=\left( k\cdot A \right)\cdot B\]" title="Rendered by QuickLaTeX.com"></p>
+                             <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c09b013d0c521fd70cd298ad90ed881f_l3.svg" height="18" width="228" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[\left( A+B \right)\cdot C=A\cdot C+B\cdot C\]" title="Rendered by QuickLaTeX.com"></p>
+                             <p class="ql-center-displayed-equation" style="line-height: 18px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-8e614753de928fb88349c7991e93c6d7_l3.svg" height="18" width="229" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[C\cdot \left( A+B \right)=C\cdot A+C\cdot B\]" title="Rendered by QuickLaTeX.com"></p>
+
+                             <div class="remark full red">
+	                              <span class="title">ЗАМЕЧАНИЕ</span>
+	                              <div class="value">
+                                  В общем случае, для произвольных матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-25f4ac8f4d3427b0a0c35d4460fc016f_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B, A\cdot B \ne B \cdot A" title="Rendered by QuickLaTeX.com" height="19" width="134" style="vertical-align: -5px;">. Если же это равенство выполняется (<img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-1c4a69493d42fa191933074d4dec194d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A \cdot B = B \cdot A" title="Rendered by QuickLaTeX.com" height="12" width="111" style="vertical-align: 0px;">), то матрицы <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c2ad2387f35d11e1454b53817a28b76d_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A" title="Rendered by QuickLaTeX.com" height="12" width="14" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-e6b67ca9131f126e20a95219c93a9034_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;"> называются коммутативными. <a href="http://ru.solverbook.com/spravochnik/matricy/edinichnaya-matrica/" title="Единичная матрица">Единичная матрица</a> <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-98d7cde47b314da3875e19c1327b99a8_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="E" title="Rendered by QuickLaTeX.com" height="12" width="15" style="vertical-align: 0px;"> коммутативна с любой другой, то есть <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-837f5caa3d28ae8ffde8b43d90e1727b_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="E \cdot A =A \cdot E = A" title="Rendered by QuickLaTeX.com" height="12" width="149" style="vertical-align: 0px;"> и играет роль единицы при умножении.
+	                              </div>
+                              </div>
+                              <div class="remark full blue">
+	                               <span class="title">ПРИМЕР 3</span>
+	                               <div class="value">
+		                               <table>
+			                               <tbody>
+                                       <tr>
+				                                 <td class="text">Задание</td>
+				                                 <td>Найти произведение матриц <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-374d4b6ad63d773d47d58149e09687e0_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A \cdot B" title="Rendered by QuickLaTeX.com" height="12" width="43" style="vertical-align: 0px;"> и <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-a9707556e933bd932fc8bef4725e921c_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="B \cdot A  ," title="Rendered by QuickLaTeX.com" height="16" width="47" style="vertical-align: -4px;"> если
+                                         <p class="ql-center-displayed-equation" style="line-height: 45px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-5e4a625b1aaf50a173f96f2906251c95_l3.svg" height="45" width="215" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A=\left( \begin{matrix}    1 &amp; 2  \\    3 &amp; 4  \\ \end{matrix} \right),   B=\left( \begin{matrix}    5 &amp; 6  \\    7 &amp; 8  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p></td>
+			                                 </tr>
+			                                 <tr>
+				                                 <td class="text">Решение</td>
+				                                 <td>По <a href="http://ru.solverbook.com/spravochnik/matricy/umnozhenie-matric/" title="Умножение матриц">правилу умножения матриц</a>,
+                                         <p class="ql-center-displayed-equation" style="line-height: 45px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-f591b5ba127fe26e93efa0a39c9bb0ec_l3.svg" height="45" width="391" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A \cdot B =\left( \begin{matrix}    1\cdot 5+2\cdot 7 &amp; 1\cdot 6+2\cdot 8  \\    3\cdot 5+4\cdot 7 &amp; 3\cdot 6+4\cdot 8  \\ \end{matrix} \right)=\left( \begin{matrix}    19 &amp; 22  \\    43 &amp; 50  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p>
+                                         <p class="ql-center-displayed-equation" style="line-height: 45px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-d7e80b16f14ac5cd71c6afdc1c16080c_l3.svg" height="45" width="391" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[B \cdot A =\left( \begin{matrix}    5\cdot 1+6\cdot 3 &amp; 5\cdot 2+6\cdot 4  \\    7\cdot 1+8\cdot 3 &amp; 7\cdot 2+8\cdot 4  \\ \end{matrix} \right)=\left( \begin{matrix}    23 &amp; 34  \\    31 &amp; 46  \\ \end{matrix} \right)\]" title="Rendered by QuickLaTeX.com"></p>
+                                         <p>Как видно <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-028a18549b188d19ce4ec63e80dfec49_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A \cdot B \ne B \cdot A" title="Rendered by QuickLaTeX.com" height="19" width="111" style="vertical-align: -5px;">.</p>
+				                                 </td>
+                                  		 </tr>
+    			                             <tr>
+				                                 <td class="text" style="padding-top: 10px;">Ответ</td>
+				                                 <td><img src="/my_images/pic515.png" alt=""></td>
+			                                 </tr>
+		                                 </tbody>
+                                   </table>
+	                                </div>
+                                </div>
+
+                                <h2>Транспонирование матриц</h2>
+                                <p>Если в матрице <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-70bb28e39079cb0a89e64740b4ecbd04_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A =\left( a_{ij}} \right)" title="Rendered by QuickLaTeX.com" height="20" width="75" style="vertical-align: -6px;"> размерности <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-4abfe0bb369d6099e40c5e528fa16e28_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\left( m\times n \right)" title="Rendered by QuickLaTeX.com" height="18" width="63" style="vertical-align: -4px;"> заменить строки столбцами с соответствующими номерами, то получим <a href="http://ru.solverbook.com/spravochnik/matricy/transponirovanie-matricy/" title="Транспонирование матрицы">транспонированную матрицу</a> <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-8e74800000ea2d1e955f101b17ccf399_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="A^{T}}" title="Rendered by QuickLaTeX.com" height="16" width="25" style="vertical-align: 0px;"> размерности <img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-191eb09058c95011b0e539ae5a8f8faf_l3.svg" class="ql-img-inline-formula quicklatex-auto-format" alt="\left( n\times m \right)" title="Rendered by QuickLaTeX.com" height="18" width="63" style="vertical-align: -4px;">.</p>
+
+                                <h3>Свойства транспонированной матрицы</h3>
+                                <ol>
+                                  <li>Дважды транспонированная матрица равна исходной матрице
+                                      <p class="ql-center-displayed-equation" style="line-height: 28px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-37c1c140f1a512a15c27e51609e702a3_l3.svg" height="28" width="158" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[A^{TT}}={\left( A^{T} \right)}^{T}=A ;\]" title="Rendered by QuickLaTeX.com"></p>
+                                  </li>
+                                  <li>транспонированная матрица суммы равна сумме транспонированных матриц
+                                      <p class="ql-center-displayed-equation" style="line-height: 22px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-c84b56b4d4b3531d510aee87ce4d6d49_l3.svg" height="22" width="181" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[{\left( A+B \right)}^{T}=A^{T}+B^{T} ;\]" title="Rendered by QuickLaTeX.com"></p>
+                                  </li>
+                                  <li>Транспонированная матрица произведения равна произведению транспонированных матриц    сомножителей, взятых в обратном порядке
+                                      <p class="ql-center-displayed-equation" style="line-height: 22px;"><span class="ql-right-eqno"> &nbsp; </span><span class="ql-left-eqno"> &nbsp; </span><img src="http://ru.solverbook.com/wp-content/ql-cache/quicklatex.com-eb47556b284e4e2741c1558bfc1d21c8_l3.svg" height="22" width="158" class="ql-img-displayed-equation quicklatex-auto-format" alt="\[{\left( A \cdot B  \right)}^{T}=B^{T}\cdot A^{T}\]" title="Rendered by QuickLaTeX.com"></p>
+                                    </li>
+                                  </ol>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <a class="logo-link" href="index.html">math calc</a>
+      <ul class="operations-list">
+        <li>
+          <a href="#">Справочник</a>
+        </li>
+        <li>
+          <a href="multiply.html">Умножение матриц</a>
+        </li>
+        <li>
+          <a href="concatenate.html">Сложение матриц</a>
+        </li>
+        <li>
+          <a href="determinate.html">Нахождение детерминанта</a>
+        </li>
+        <li>
+        <a href="expressions.html">Арифметические выражения</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

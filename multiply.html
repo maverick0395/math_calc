@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Computing matrixes online</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/reset.css">-->
+  </head>
+  <body>
+    <header class="main-header">
+      <a class="logo-link" href="index.html">math calc</a>
+      <ul class="operations-list">
+        <li>
+          <a  href="#">Справочник</a>
+        </li>
+        <li>
+          <a class="active" href="multiply.html">Умножение матриц</a>
+        </li>
+        <li>
+          <a href="concatenate.html">Сложение матриц</a>
+        </li>
+        <li>
+          <a href="determinate.html">Нахождение детерминанта</a>
+        </li>
+        <li>
+        <a href="expressions.html">Арифметические выражения</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="calc_field">
+        <form id="msform" class="calc_form" action="index.html" method="post">
+          <ul id="progressbar">
+		          <li class="active">Account Setup</li>
+		          <li>Social Profiles</li>
+		          <li>Personal Details</li>
+	        </ul>
+          <fieldset>
+            <h2>Умножение матриц</h2>
+            <h3>Выберите размерность матриц</h3>
+            <label class="form_text" for="matrixA">Выберите размерность Матрицы А</label>
+            <select class="matrixA_selection_rows" name="rawsInA">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select> <span>x</span>
+            <select class="matrixA_selection_cols" name="colsInA">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select><br>
+            <label class="form_text" for="matrixA">Выберите размерность Матрицы B</label>
+            <select class="matrixB_selection_rows" name="rawsInB">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select> <span>x</span>
+            <select class="matrixB_selection_cols" name="colsInB">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select><br>
+            <input type="button" name="next" class="next action-button compute-size" value="Next" >
+          </fieldset>
+          <fieldset id="elem" >
+            <h3>Введите значения элементов матрицы</h3>
+            <h4 id="labelA">Матрица А</h4>
+            <h4 id="labelB">Матрица В</h4>
+            <input type="button" name="previous" class="previous action-button delete-size" value="Previous" >
+            <input type="button" name="next" class="next action-button" value="Next" >
+          </fieldset>
+          <fieldset id="3">
+            <h3>Пошаговое решение примера</h3>
+            <input type="text" name="mElement">
+            <input type="text" name="mElement">
+            <input type="text" name="mElement">
+            <input type="text" name="mElement">
+            <input type="button" name="previous" class="previous action-button" value="Previous" >
+            <input type="submit" name="submit" class="submit action-button" value="Submit" >
+          </fieldset>
+
+        </form>
+      </div>
+    </main>
+
+    <script src="js/calc.js"></script>
+  </body>
+</html>
+
+<!--<input class="for_number" type="text" name="matrixA_col"  required pattern="[1-9]{1}" title="Нужно ввести соответсвующее число от 1 до 9"> x
+<input class="for_number" type="text" name="matrixA_row" required pattern="[1-9]{1}" title="Нужно ввести соответсвующее число от 1 до 9"></label><br>
+<label class="form_text" for="matrixB">Матрица В
+<input class="for_number" type="text" name="matrixB_col" required pattern="[1-9]{1}" title="Нужно ввести соответсвующее число от 1 до 9"> x
+<input class="for_number" type="text" name="matrixB_row" required pattern="[1-9]{1}" title="Нужно ввести соответсвующее число от 1 до 9"></label><br>
+-->
