@@ -14,95 +14,85 @@
       <a class="logo-link" href="index.html">math calc</a>
       <ul class="operations-list">
         <li>
-          <a  href="#">Справочник</a>
+          <a href="index.html">Довідник</a>
         </li>
         <li>
-          <a class="active" href="multiply.html">Умножение матриц</a>
+          <a class="active" href="multiply.html">Множення матриць</a>
         </li>
         <li>
-          <a href="concatenate.html">Сложение матриц</a>
+          <a href="determinate.html">Знаходження детермінанта</a>
         </li>
-        <li>
-          <a href="determinate.html">Нахождение детерминанта</a>
-        </li>
-        <li>
-        <a href="expressions.html">Арифметические выражения</a></li>
       </ul>
     </header>
     <main>
       <div class="calc_field">
         <form id="msform" class="calc_form" action="index.html" method="post">
-          <ul id="progressbar">
-		          <li class="active">Account Setup</li>
-		          <li>Social Profiles</li>
-		          <li>Personal Details</li>
-	        </ul>
           <fieldset id="first_fs">
-            <h2>Умножение матриц</h2>
-            <h3>Выберите размерность матриц</h3>
-            <label class="form_text" for="matrixA">Выберите размерность Матрицы А</label>
-            <select class="matrixA_selection_rows" name="rawsInA">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3" selected>3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select> <span>x</span>
-            <select class="matrixA_selection_cols" name="colsInA">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3" selected>3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select><br>
-            <label class="form_text" for="matrixA">Выберите размерность Матрицы B</label>
-            <select class="matrixB_selection_rows" name="rawsInB">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select> <span>x</span>
-            <select class="matrixB_selection_cols" name="colsInB">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select><br>
+            <h2>Множення матриць</h2>
+            <h3>Оберіть розмірність матриці</h3>
+            <div class="row_container">
+              <label class="form_text" for="matrixA">Оберіть розмірність Матриці А</label>
+              <select class="matrixA_selection_rows" name="rawsInA">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select> <span>x</span>
+              <select class="matrixA_selection_cols" name="colsInA">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select><br>
+            </div>
+            <div class="row_container">
+              <label class="form_text" for="matrixA">Оберіть розмірність Матриці B</label>
+              <select class="matrixB_selection_rows" name="rawsInB">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select> <span>x</span>
+              <select class="matrixB_selection_cols" name="colsInB">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select><br>
+            </div>
             <input type="button" name="next" class="next action-button compute-size" value="Next" >
           </fieldset>
           <fieldset id="second_fs" >
-            <h3>Введите значения элементов матрицы</h3>
-            <h4 id="labelA">Матрица А</h4>
-            <h4 id="labelB">Матрица В</h4>
+            <h3>Введіть значення елементів матриці</h3>
+            <h4 id="labelA">Матриця А</h4>
+            <h4 id="labelB">Матриця В</h4>
             <input type="button" name="previous" class="previous action-button delete-size" value="Previous" >
             <input type="button" name="next" class="next action-button process-data" value="Next" >
           </fieldset>
           <fieldset id="3">
-            <h3>Пошаговое решение примера</h3>
-            <input type="text" name="mElement">
-            <input type="text" name="mElement">
-            <input type="text" name="mElement">
-            <input type="text" name="mElement">
-            <input type="button" name="previous" class="previous action-button" value="Previous" >
-            <input type="submit" name="submit" class="submit action-button" value="Submit" >
+            <h3 class="stepTitle">Покрокове розв'язання прикладу</h3>
+            <h3 class="finalTitle">Кінцевий результат</h3>
+            <input type="button" name="previous" class="previous action-button delete_calc" value="Previous" >
           </fieldset>
 
         </form>

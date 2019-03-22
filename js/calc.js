@@ -6,12 +6,74 @@ var allow2next = (element) => {
 
   next_fs.show();
   current_fs.hide();
+};
 
+var allow2previous = (element) => {
+  current_fs = $(element).parent();
+  previous_fs = $(element).parent().prev();
+
+  previous_fs.show();
+  current_fs.hide();
 }
 
-$('.next').click(function() {
+var form_matrix = (rows, cols, which_row, which_col) => {
+  var m_array = []
+  for (var i = 0; i < which_row; i++) {
+    m_array[i] = [];
+    for (var j = 0; j < which_col; j++)
+    {
+      if ($(`${rows}${i+1} ${cols}${j+1}`).val() === '') {
+        return;
+      }
+       m_array[i][j] = Number($(`${rows}${i+1} ${cols}${j+1}`).val());
+    }
+  }
+    return m_array;
+};
 
-});
+var multiplyMatrix = (A,B) => {
+  var rowsA = A.length, colsA = A[0].length,
+      rowsB = B.length, colsB = B[0].length,
+      C = [];
+
+  for (var i = 0; i < rowsA; i++) C[i] = [];
+  for (var k = 0; k < colsB; k++) {
+    for (var i = 0; i < rowsA; i++) {
+      var t = 0;
+      for (var j = 0; j < rowsB; j++) t += A[i][j] * B[j][k];
+      C[i][k] = t;
+    }
+  }
+  return C;
+}
+
+var display_step = (A,B) => {
+  var rowsA = A.length, colsA = A[0].length,
+      rowsB = B.length, colsB = B[0].length,
+      C = [];
+
+  for (var i = 0; i < rowsA; i++) C[i] = [];
+  for (var k = 0; k < colsB; k++) {
+    for (var i = 0; i < rowsA; i++) {
+      var t = [];
+      for (var j = 0; j < rowsB; j++) t.push(`(${A[i][j]} * ${B[j][k]})`);
+      var jt = t.join('+');
+
+      C[i][k] = jt;
+    }
+  }
+  return C;
+}
+
+var create_m_table = (matrix, type) => {
+  $(`#3 .${type}Title`).after(`<table class='${type}_result ${type}Table'></table>`);
+  for (var i = 0; i < matrix.length; i++) {
+    $(`.${type}_result`).append(`<tr class='${type}_t_raw${i+1}'><tr>`);
+    for (var j = 0; j < matrix[0].length; j++) {
+      $(`.${type}_t_raw${i+1}`).append(`<td>${matrix[i][j]}</td>`)
+    }
+  }
+}
 
 $('select').click(function() {
   if ($('p').is('.speech')) {
@@ -38,42 +100,41 @@ $('.compute-size').click(function() {
       $('#second_fs #labelB').before(`<div  class='rows a_row a${i+1}'></div>`);
   }
   for (var j = 0; j < a_cols; j++) {
-    $('.a_row').append(`<input class='cols a_col position_a${j+1} cell' type='text' name='a_element${j+1}'>`);
+    $('.a_row').append(`<input class='cols a_col position_a${j+1} cell' type='number' name='a_element${j+1}'>`);
   }
   for (var i = 0; i < b_rows; i++) {
     $('#second_fs .previous').before(`<div class='rows b_row b${i+1}'></div>`);
   }
   for (var j = 0; j < b_cols; j++) {
-    $('.b_row').append(`<input class='cols b_col position_b${j+1} cell' type='text' name='b_element${j+1}'>`);
+    $('.b_row').append(`<input class='cols b_col position_b${j+1} cell' type='number' name='b_element${j+1}'>`);
   }
 });
 
 $('.delete-size').click(function() {
   $('.rows').detach();
+  allow2previous(this);
 });
 
-$('.previous').click(function () {
-  current_fs = $(this).parent();
-  previous_fs = $(this).parent().prev();
 
-  previous_fs.show();
-  current_fs.hide();
+$('.delete_calc').click(function () {
+  $('.final_result').detach();
+  $('.step_result').detach();
+  allow2previous(this);
 });
 
 $('.process-data').click(function() {
-  var m_array = []
-  for (var i = 0; i < a_rows; i++) {
-    m_array[i] = [];
-    for (var j = 0; j < a_cols; j++)
-    {
-      m_array[i][j] = $(`.a${i+1} .position_a${j+1}`).val();
-    }
-  }
-  alert(m_array);
-  if (isNaN($('.cell').val())) {
-    alert($('.b3 .position_b2').val());
-    return;
-  }
 
+  var matrix_A = form_matrix('.a', '.position_a', a_rows, a_cols);
+  var matrix_B = form_matrix('.b', '.position_b', b_rows, b_cols);
+  if (matrix_A === undefined || matrix_B === undefined) {
+      return;
+  }
   allow2next(this);
+  var step_C = display_step(matrix_A, matrix_B);
+  var matrix_C = multiplyMatrix(matrix_A, matrix_B);
+  create_m_table(step_C, 'step');
+  create_m_table(matrix_C, 'final');
+
+
+
 });
