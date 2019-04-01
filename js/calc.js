@@ -65,6 +65,39 @@ var display_step = (A,B) => {
   return C;
 }
 
+var determinateMatrix = (A) => {
+  var N = A.length, B = [], denom = 1, exchanges = 0;
+    for (var i = 0; i < N; ++i)
+     { B[i] = [];
+       for (var j = 0; j < N; ++j) B[i][j] = A[i][j];
+     }
+    for (var i = 0; i < N-1; ++i)
+     { var maxN = i, maxValue = Math.abs(B[i][i]);
+       for (var j = i+1; j < N; ++j)
+        { var value = Math.abs(B[j][i]);
+          if (value > maxValue){ maxN = j; maxValue = value; }
+        }
+       if (maxN > i)
+        { var temp = B[i]; B[i] = B[maxN]; B[maxN] = temp;
+          ++exchanges;
+        }
+       else { if (maxValue == 0) return maxValue; }
+       var value1 = B[i][i];
+       for (var j = i+1; j < N; ++j)
+        { var value2 = B[j][i];
+          B[j][i] = 0;
+          for (var k = i+1; k < N; ++k) B[j][k] = (B[j][k]*value1-B[i][k]*value2)/denom;
+        }
+       denom = value1;
+     }
+    if (exchanges%2) return B[N-1][N-1];
+    else return -B[N-1][N-1];
+}
+
+var show_det = (determinant) => {
+  $(`.finalTitle`).after(`<div class='final_value'>${determinant}</div>`)
+}
+
 var create_m_table = (matrix, type) => {
   $(`#3 .${type}Title`).after(`<table class='${type}_result ${type}Table'></table>`);
   for (var i = 0; i < matrix.length; i++) {
@@ -110,6 +143,20 @@ $('.compute-size').click(function() {
   }
 });
 
+$('.compute-size-det').click(function() {
+  d_cols = $('.matrixA_selection :selected').val();
+  d_rows = $('.matrixA_selection :selected').val();
+
+  allow2next(this);
+
+  for (var i = 0; i < d_rows; i++) {
+      $('#second_fs #labelA').after(`<div  class='rows d_row d${i+1}'></div>`);
+  }
+  for (var j = 0; j < d_cols; j++) {
+    $('.d_row').append(`<input class='cols d_col position_d${j+1} cell' type='number' name='a_element${j+1}'>`);
+  }
+});
+
 $('.delete-size').click(function() {
   $('.rows').detach();
   allow2previous(this);
@@ -134,7 +181,20 @@ $('.process-data').click(function() {
   var matrix_C = multiplyMatrix(matrix_A, matrix_B);
   create_m_table(step_C, 'step');
   create_m_table(matrix_C, 'final');
+});
 
+$('.process-data-det').click(function() {
 
+  var matrix_D = form_matrix('.d', '.position_d', d_rows, d_cols);
+  if (matrix_D === undefined) {
+      return;
+  }
+  allow2next(this);
 
+  var det = determinateMatrix(matrix_D);
+  show_det(det);
+});
+$('.delete_calc_det').click(function () {
+  $('.final_value').detach();
+  allow2previous(this);
 });
